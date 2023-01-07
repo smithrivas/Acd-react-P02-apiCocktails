@@ -2,6 +2,7 @@ import './App.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Cocktails from './components/Cocktails'
+import Alert from './components/Alert'
 
 function App() { 
   // Recoge los datos de la Api
@@ -38,12 +39,19 @@ function App() {
         <form onSubmit={(e)=>searchDrink(e)}>
           <input type="text" placeholder='Buscar por nombre' />
           <button type='submit'>Buscar</button>
+          {
+            dataCocktail === null ? <Alert/> : <></>
+          }
         </form>      
       </div>
+      
       <div className="cards">
-      {
-        dataCocktail.map( (cocktail, index)=> <Cocktails data={cocktail} key={index} /> )
-      }
+        { 
+          dataCocktail !== null ? dataCocktail.map( (cocktail, index)=> <Cocktails data={cocktail} key={index} /> ) : <></>
+        }
+      </div>
+      <div>
+
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 
-const Cocktails = ({data})=>{    
+const Cocktails = ({data})=>{  
     return(        
         <div className="drink-card">
             <img src={data.strDrinkThumb} alt="" />
