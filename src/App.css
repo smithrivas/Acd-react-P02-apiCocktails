@@ -17,7 +17,7 @@ h1 span{
     color: #8cbc00;    
 }
 .App{
-    width: 1200px;
+    width: 900px;
     margin: 0 auto;
 }
 .form{
@@ -47,7 +47,7 @@ h1 span{
 }
 .cards{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);    
+    grid-template-columns: repeat(3, 1fr);    
     gap: 1rem;    
     margin-bottom: 2rem;
 }
